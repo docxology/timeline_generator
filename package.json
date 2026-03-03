@@ -1,0 +1,23 @@
+{
+  "name": "timeline-generator",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Networked Life Encoding for People, Ideas, and Civilizational Threads",
+  "scripts": {
+    "dev": "concurrently \"pnpm --filter backend dev\" \"pnpm --filter frontend dev\"",
+    "build": "pnpm --filter shared build && pnpm --filter seed-data build && pnpm --filter backend build && pnpm --filter frontend build",
+    "dev:backend": "pnpm --filter backend dev",
+    "dev:frontend": "pnpm --filter frontend dev",
+    "test": "pnpm -r --filter shared --filter seed-data --filter backend test"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "typescript": "^5.7.3",
+    "vitest": "^4.0.18"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
+}
