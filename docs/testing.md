@@ -16,10 +16,10 @@ pnpm --filter seed-data test
 pnpm --filter backend test
 
 # Watch mode
-pnpm --filter shared test -- --watch
+pnpm --filter shared exec vitest
 
-# With coverage
-pnpm --filter shared test -- --coverage
+# With coverage (install the provider once: pnpm add -D @vitest/coverage-v8)
+pnpm --filter shared exec vitest run --coverage
 ```
 
 ## Test Structure

@@ -30,7 +30,7 @@ The frontend Vite config proxies `/api/*` requests to the backend.
 ```yaml
 services:
   neo4j:
-    image: neo4j:5-community
+    image: neo4j:5.26.32
     ports:
       - "7474:7474"
       - "7687:7687"
@@ -101,6 +101,10 @@ export default defineConfig({
 ```yaml
 packages:
   - 'packages/*'
+
+# pnpm 11+ build policy: allow esbuild's install script
+allowBuilds:
+  esbuild: true
 ```
 
 ## Package Dependencies
@@ -110,8 +114,9 @@ packages:
 ```json
 {
   "devDependencies": {
-    "concurrently": "^9.2.1",
-    "typescript": "^5.7.3"
+    "concurrently": "^9.1.2",
+    "typescript": "^5.7.3",
+    "vitest": "^4.0.18"
   }
 }
 ```
@@ -125,7 +130,7 @@ packages:
 - `uuid` — ID generation
 - `pino-pretty` — log formatting
 - `tsx` (dev) — TypeScript execution
-- `@types/node`, `@types/uuid` (dev) — type definitions
+- `@types/node` (dev) — Node type definitions (`uuid` ships its own types)
 - `vitest` (dev) — test runner
 
 ### Shared

@@ -35,7 +35,7 @@ The `run.sh` script handles everything:
 1. **Preflight checks** — Node.js, pnpm, Docker availability
 2. **Dependency installation** — `pnpm install`
 3. **Neo4j startup** — `docker compose up -d`
-4. **TypeScript validation** — `npx tsc --noEmit`
+4. **TypeScript validation** — `npx tsc --noEmit` (backend package)
 5. **Test execution** — `pnpm test` (204 tests)
 6. **Server launch** — backend + frontend concurrently
 7. **Auto-open browser** — opens `http://localhost:5173`
@@ -58,7 +58,9 @@ Expected output:
 ```
 [Server] Neo4j driver initialized
 [Server] Neo4j constraints applied
-[Hydrate] Inserted 20 persons, 42 edges, 46 events
+[Hydrate] Inserted 20 persons
+[Hydrate] Inserted 42 edges
+[Hydrate] Inserted 46 events
 [Server] Store switched to Neo4jStore (persistent)
 🌐 Timeline Generator API running at http://localhost:3001
    Engine: Neo4j Graph Database

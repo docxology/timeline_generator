@@ -5,13 +5,13 @@
 **Networked Life Encoding for People, Ideas, and Civilizational Threads**
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
-[![React](https://img.shields.io/badge/React-18.x-61DAFB?style=flat-square&logo=react&logoColor=black)](https://reactjs.org/)
-[![Fastify](https://img.shields.io/badge/Fastify-4.x-black?style=flat-square&logo=fastify)](https://www.fastify.io/)
+[![React](https://img.shields.io/badge/React-19.x-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev/)
+[![Fastify](https://img.shields.io/badge/Fastify-5.x-black?style=flat-square&logo=fastify)](https://fastify.dev/)
 [![D3.js](https://img.shields.io/badge/D3.js-7.x-F9A03C?style=flat-square&logo=d3.js&logoColor=white)](https://d3js.org/)
 [![Neo4j](https://img.shields.io/badge/Neo4j-5.x-008CC1?style=flat-square&logo=neo4j&logoColor=white)](https://neo4j.com/)
 [![pnpm](https://img.shields.io/badge/pnpm-workspace-F69220?style=flat-square&logo=pnpm&logoColor=white)](https://pnpm.io/)
 [![Tests](https://img.shields.io/badge/tests-204_passing-brightgreen?style=flat-square)](docs/testing.md)
-[![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
+![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)
 
 An open, browser-native knowledge graph that encodes human lives as first-class temporal objects and weaves them into richly typed relational networks.
 
@@ -83,7 +83,7 @@ Beginning with a seed network around **R. Buckminster Fuller**, the system expan
 - **Perplexity-Powered Research** — Built-in LLM integration to automatically research new figures, enrich existing profiles, and inject them into the active graph
 - **Enrich Existing Entities** — Searchable dropdown of all graph persons for targeted AI-powered profile enrichment
 - **Glassmorphic UI Engine** — Sleek Black, White, Gray, and Red aesthetic with accessible, responsive control panels
-- **Neo4j Graph Database** — Persistent Cypher-backed storage with BFS traversal, shortest path, and APOC algorithms
+- **Neo4j Graph Database** — Persistent Cypher-backed storage with BFS traversal and shortest path
 - **Smart Date Display** — Intelligent year formatting that collapses same-year ranges (no more "1941–1941")
 
 ## 🏗️ Architecture
@@ -148,7 +148,7 @@ All aspects of the system are documented in the [`/docs`](docs/README.md) direct
 | [Getting Started](docs/getting-started.md) | Installation, setup, and first run |
 | [Architecture](docs/architecture.md) | System design, monorepo structure, data flow |
 | [Data Model](docs/data-model.md) | 24 relationship types, 12 event types, confidence tiers |
-| [API Reference](docs/api-reference.md) | 18 REST endpoints with examples |
+| [API Reference](docs/api-reference.md) | 19 REST endpoints with examples |
 | [Research](docs/research.md) | Perplexity AI research and entity enrichment |
 | [Frontend Guide](docs/frontend-guide.md) | React components, D3 visualization, Zustand state |
 | [Backend Guide](docs/backend-guide.md) | Fastify server, Neo4j store, route handlers |

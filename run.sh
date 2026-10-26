@@ -6,8 +6,8 @@
 #   1. Preflight   — check prerequisites (Node, pnpm, Docker)
 #   2. Install     — pnpm install (idempotent)
 #   3. Database    — start Neo4j via Docker Compose
-#   4. Validate    — TypeScript type-check across all packages
-#   5. Test        — run the full 185-test suite
+#   4. Validate    — TypeScript type-check (backend package)
+#   5. Test        — run the full 204-test suite
 #   6. Launch      — start backend + frontend, open browser
 #
 # Usage:

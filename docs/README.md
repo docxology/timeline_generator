@@ -9,7 +9,7 @@ Comprehensive documentation for the Timeline Generator knowledge graph system.
 | [Getting Started](./getting-started.md) | Installation, setup, and first run |
 | [Architecture](./architecture.md) | System design, monorepo structure, data flow |
 | [Data Model](./data-model.md) | Person, Edge, Event schemas and taxonomy |
-| [API Reference](./api-reference.md) | 18 REST endpoint documentation |
+| [API Reference](./api-reference.md) | 19 REST endpoint documentation |
 | [Research](./research.md) | Perplexity AI research & entity enrichment |
 | [Seed Data](./seed-data.md) | Fuller network dataset specification |
 | [Frontend Guide](./frontend-guide.md) | React components, D3 visualization, state management |

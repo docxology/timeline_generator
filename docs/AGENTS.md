@@ -9,7 +9,7 @@ All user-facing documentation lives here. Each file covers one topic. The `READM
 ## File Inventory
 
 - `README.md` — Index and project overview
-- `api-reference.md` — 18 REST endpoints
+- `api-reference.md` — 19 REST endpoints
 - `architecture.md` — System design, monorepo, data flow
 - `backend-guide.md` — Fastify, Neo4j store, routes
 - `configuration.md` — Env vars, Docker, Vite, TS config

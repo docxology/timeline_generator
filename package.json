@@ -14,10 +14,5 @@
     "concurrently": "^9.1.2",
     "typescript": "^5.7.3",
     "vitest": "^4.0.18"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild"
-    ]
   }
 }
