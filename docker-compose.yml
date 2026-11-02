@@ -1,6 +1,6 @@
 services:
   neo4j:
-    image: neo4j:5.26.32
+    image: neo4j:5.26.32@sha256:249a1ec6e3c52d82101a5ed33d6ed2b5ed5b0017b21a28c0bfebc335e87fb177
     container_name: timeline_neo4j
     ports:
       - "7474:7474" # HTTP Browser
