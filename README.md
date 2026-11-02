@@ -10,7 +10,7 @@
 [![D3.js](https://img.shields.io/badge/D3.js-7.x-F9A03C?style=flat-square&logo=d3.js&logoColor=white)](https://d3js.org/)
 [![Neo4j](https://img.shields.io/badge/Neo4j-5.x-008CC1?style=flat-square&logo=neo4j&logoColor=white)](https://neo4j.com/)
 [![pnpm](https://img.shields.io/badge/pnpm-workspace-F69220?style=flat-square&logo=pnpm&logoColor=white)](https://pnpm.io/)
-[![Tests](https://img.shields.io/badge/tests-204_passing-brightgreen?style=flat-square)](docs/testing.md)
+**Tests:** 204 passing (snapshot figure; this repository runs no CI workflow) — see [docs/testing.md](docs/testing.md).
 ![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)
 
 An open, browser-native knowledge graph that encodes human lives as first-class temporal objects and weaves them into richly typed relational networks.
