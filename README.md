@@ -195,3 +195,7 @@ No blue. The interface strictly adheres to a monochromatic deep-space aesthetic 
 <div align="center">
   <sub>Built for the exploration of networked human intellectual history.</sub>
 </div>
+
+## License
+
+Released under the [MIT License](LICENSE).
