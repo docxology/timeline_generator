@@ -1,0 +1,10 @@
+{
+  "figures": [
+    {
+      "label": "fig:fictional-timeline",
+      "filename": "fictional-timeline.png",
+      "alt_text": "The fictional graph shows one collaboration after brushing the timeline, three people, and Aria Vale's workshop notebook in the inspector.",
+      "generated_by": "Local browser capture of the production bundle with the fictional fixture and in-memory Fastify routes"
+    }
+  ]
+}

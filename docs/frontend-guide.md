@@ -96,7 +96,7 @@ Modal overlay for AI-powered research. Features two tabs:
 
 When a new-person search finds someone already in the graph, the panel offers an **"✨ Enrich Their Profile"** button for seamless enrichment.
 
-The backend passes all existing person canonical names into the Perplexity prompt so that `suggestedEdges` target names precisely match graph nodes. This ensures that newly researched or enriched nodes integrate into the network with proper typed edges.
+The backend passes all existing person canonical names into the Perplexity prompt so that `suggestedEdges` target names precisely match graph nodes. The backend compares returned target names with the existing graph before creating edges. Unmatched names do not create relationship records.
 
 ![Research modal — New Person](./assets/screenshot_research_new.png)
 

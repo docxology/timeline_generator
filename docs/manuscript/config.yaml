@@ -1,0 +1,29 @@
+paper:
+  title: "Timeline Generator: A Browser-Based Temporal Knowledge Graph"
+  subtitle: "Software design and local verification"
+  version: "0.1.0"
+
+authors:
+  - name: "Daniel Ari Friedman"
+    orcid: "0000-0001-6232-9096"
+
+publication:
+  github_repository: "docxology/timeline_generator"
+
+keywords:
+  - "temporal knowledge graph"
+  - "biographical data"
+  - "timeline brushing"
+  - "software verification"
+
+metadata:
+  license: "MIT"
+  language: "en"
+
+render:
+  formats:
+    pdf: true
+    html: true
+    slides: false
+    docx: false
+    epub: false

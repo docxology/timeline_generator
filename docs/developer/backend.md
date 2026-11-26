@@ -1,12 +1,12 @@
 # @timeline-generator/backend
 
-Fastify REST API backed by Neo4j graph database, 18 endpoints, and Perplexity AI integration.
+Fastify REST API backed by Neo4j graph database, 19 endpoints including health, and Perplexity AI integration.
 
 ## Architecture
 
 ```
 src/
-├── index.ts           # Fastify server bootstrap (port 3001)
+├── server.ts           # Fastify server bootstrap (port 3001)
 ├── store.ts           # IGraphStore interface + singleton
 ├── routes/
 │   ├── persons.ts     # 8 person CRUD + events + network routes
@@ -15,7 +15,7 @@ src/
 │   └── research.ts    # 2 Perplexity research routes
 └── __tests__/
     ├── store.test.ts           # 51 unit tests for IGraphStore
-    ├── routes.test.ts          # 45 integration tests for all endpoints + normalizePersonData
+    ├── routes.test.ts          # 45 store-level route cases and normalization cases
     └── research-routes.test.ts # 8 HTTP integration tests for add/enrich
 ```
 
@@ -27,7 +27,7 @@ Async graph store interface implemented by Neo4jStore (Cypher queries) in produc
 
 - Person CRUD + filtered queries (search, domain, year range)
 - Edge CRUD + person-scoped queries
-- Event CRUD + chronological retrieval
+- Event creation and chronological retrieval
 - BFS ego network traversal
 - Shortest path finding
 - Timeline data aggregation
@@ -35,7 +35,7 @@ Async graph store interface implemented by Neo4jStore (Cypher queries) in produc
 
 ### Routes
 
-18 REST endpoints under `/api/`. See [docs/api-reference.md](../../docs/api-reference.md) for full documentation.
+Route modules register the application endpoints. The server adds `/api/health`. See [API reference](../api-reference.md) for full documentation.
 
 ## Running
 

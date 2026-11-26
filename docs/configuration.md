@@ -13,7 +13,8 @@ The frontend Vite config proxies `/api/*` requests to the backend.
 
 ## Environment Variables
 
-**File:** `packages/backend/.env`
+The backend loads `packages/backend/.env` when launched through the
+workspace scripts. Process environment variables also apply.
 
 | Variable | Default | Description |
 |---|---|---|
@@ -25,22 +26,12 @@ The frontend Vite config proxies `/api/*` requests to the backend.
 
 ## Docker Compose
 
-**File:** `docker-compose.yml`
-
-```yaml
-services:
-  neo4j:
-    image: neo4j:5.26.32
-    ports:
-      - "7474:7474"
-      - "7687:7687"
-    environment:
-      NEO4J_AUTH: neo4j/secretPassword
-      NEO4J_PLUGINS: '["apoc"]'
-    volumes:
-      - neo4j_data:/data
-      - neo4j_logs:/logs
-```
+Use the tracked [Compose file](../docker-compose.yml) for the pinned image,
+ports, health check, and data volumes. Compose publishes the database
+ports on the host. The shipped authentication defaults are intended for
+local development. The application API has no built-in user authentication.
+Vite's proxy target is fixed to port 3001 in the checked-in configuration.
+If you change the backend port, update the proxy target for development.
 
 ## TypeScript
 

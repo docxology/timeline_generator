@@ -64,7 +64,7 @@ backend ──→ shared ──→ zod
 
 ## Data Flow
 
-1. **Startup**: Server initializes Neo4j driver, applies uniqueness constraints, and hydrates seed data if the database is empty
+1. **Startup**: Server initializes Neo4j driver, applies uniqueness constraints, and hydrates seed data when no Person nodes exist
 2. **Store Injection**: `Neo4jStore` is injected as the active `IGraphStore` implementation
 3. **API Request**: Frontend fetches `/api/graph/full` on mount
 4. **Cypher Execution**: Route handlers call `IGraphStore` methods → `Neo4jStore` executes Cypher queries via Bolt
@@ -85,15 +85,15 @@ All data is persisted in a Neo4j graph database running via Docker:
 - **Events** stored as `:Event` nodes linked to persons via `-[:HAS_EVENT]->`
 - **Nested objects** (arrays, affiliations) are JSON-serialized as string properties and deserialized on read
 - **Uniqueness constraints** on `Person.id` and `Event.id` enforced at the schema level
-- **Seed data** automatically inserted on first boot if the database is empty
+- **Seed data** automatically inserted on first boot when no Person nodes exist
 
 ### IGraphStore Interface
 
 A strict TypeScript interface (`IGraphStore`) defines the contract for all storage operations. The `Neo4jStore` class implements this with optimized Cypher queries. Routes interact only with the interface, never directly with the database driver.
 
-### D3 Force Simulation over Canvas
+### D3 force simulation on SVG
 
-SVG rendering provides individual element interactivity, CSS-styleable elements, and smooth React lifecycle integration. For larger graphs (1000+ nodes) a Canvas/WebGL upgrade path is available.
+SVG rendering provides individual element interactivity, CSS-styleable elements, and smooth React lifecycle integration. Canvas and WebGL rendering are outside the current implementation.
 
 ### Zustand over Redux
 
@@ -107,4 +107,4 @@ All packages use `"type": "module"` for native ES module support. The backend ru
 
 ![Main graph view](./assets/screenshot_graph.png)
 
-See the [root README](../README.md) for full screenshots and demo recordings.
+See the [interface gallery](gallery.md) for screenshots and demo recordings.
