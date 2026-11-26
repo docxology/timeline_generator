@@ -2,12 +2,12 @@
 
 ## Test Framework
 
-The project uses [Vitest](https://vitest.dev/) for unit and integration testing across all packages.
+The project uses [Vitest](https://vitest.dev/) for the shared, seed-data, and backend packages. The frontend has a type and production bundle check via `pnpm build`. The current root test command does not run a browser suite.
 
 ## Running Tests
 
 ```bash
-# All packages (204 tests)
+# Shared, seed-data, and backend suites
 pnpm test
 
 # Specific package
@@ -83,16 +83,21 @@ packages/
 7. **Edge update** — partial updates preserve unmodified fields, returns undefined for nonexistent
 8. **Full graph assembly** — assembled graph has valid node-edge referential integrity
 
-### Route Integration Tests (`backend`)
+### Route logic cases (`backend`)
 
 1. **Person routes** — CRUD, search filters, events, ego network (16 tests)
 2. **Edge routes** — CRUD, error handling (10 tests)
 3. **Graph routes** — timeline data, shortest path, full graph payload, counts (8 tests)
 
-### Research & Enrichment Tests (`backend`)
+### Research and enrichment cases (`backend`)
 
 1. **normalizePersonData** — field defaults, confidence clamping, string occupation conversion, date preservation (7 tests)
 2. **Enrichment merge logic** — occupation dedup, tag dedup, birthDate update (4 tests)
+
+The general route logic tests call the in-memory store directly. The
+research route tests additionally use Fastify injection and a stubbed
+provider response. These tests require neither a live Neo4j instance
+nor a provider key.
 
 ## Writing Tests
 

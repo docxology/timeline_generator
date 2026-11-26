@@ -86,7 +86,7 @@ export const PersonSchema = z.object({
     provenance: z.array(SourceSchema).optional(),
     tags: z.array(z.string()).optional(),
     primaryDomain: z.string().optional(),
-    customFields: z.record(z.unknown()).optional(),
+    customFields: z.record(z.string(), z.unknown()).optional(),
 });
 
 // ─── Event Schema ───────────────────────────────────────────────────

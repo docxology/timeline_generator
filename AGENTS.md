@@ -31,10 +31,10 @@ Monorepo managed by pnpm workspaces with 4 packages:
 ```bash
 pnpm dev          # concurrent backend + frontend
 pnpm build        # sequential: shared → seed-data → backend → frontend
-pnpm test         # 204 tests across shared, seed-data, backend
+pnpm test         # shared, seed-data, and backend tests
 ./run.sh          # all-in-one: preflight, install, test, launch
 ./run.sh --skip-tests   # skip test suite
-./run.sh --test-only    # run tests only, no servers
+./run.sh --test-only    # prepare Neo4j and run tests; skip final launch
 ```
 
 ## Data Model
@@ -56,4 +56,6 @@ pnpm test         # 204 tests across shared, seed-data, backend
 
 ## External Dependencies
 
-- `PERPLEXITY_API_KEY` env var required for research feature (graceful fallback if missing)
+- `PERPLEXITY_API_KEY` env var required for live research (graceful fallback if missing)
+
+[Documentation index](docs/README.md) · [Workspace source map](docs/developer/workspace.md)

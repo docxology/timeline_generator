@@ -27,7 +27,7 @@ src/
 
 ## Theme
 
-Black, Gray, White, Red — no blue. All color tokens defined in `index.css` custom properties.
+Black, Gray, White, Red — no blue. Base colors use CSS variables. The shared package defines domain and relationship colors.
 
 ## Running
 

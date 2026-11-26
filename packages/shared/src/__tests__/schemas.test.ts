@@ -41,7 +41,7 @@ const fullPerson = {
     provenance: [{ id: 'src-1', url: 'https://example.com', title: 'Source' }],
     tags: ['test', 'example'],
     primaryDomain: 'engineering',
-    customFields: { specialty: 'bridges' },
+    customFields: { specialty: 'bridges', projects: [{ name: 'Demonstration' }] },
 };
 
 const validEdge = {
@@ -116,8 +116,7 @@ describe('PersonSchema', () => {
     });
 
     it('validates a fully populated person', () => {
-        const result = PersonSchema.safeParse(fullPerson);
-        expect(result.success).toBe(true);
+        expect(PersonSchema.parse(fullPerson).customFields).toEqual(fullPerson.customFields);
     });
 
     it('rejects missing canonicalName', () => {

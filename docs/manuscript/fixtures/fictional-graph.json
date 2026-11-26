@@ -1,0 +1,61 @@
+{
+  "persons": [
+    {
+      "key": "aria",
+      "canonicalName": "Aria Vale",
+      "birthDate": "1920",
+      "deathDate": "1998",
+      "primaryDomain": "engineering",
+      "occupations": [{"name": "Engineer"}],
+      "confidence": 0.9
+    },
+    {
+      "key": "mina",
+      "canonicalName": "Mina Reed",
+      "birthDate": "1930",
+      "deathDate": "2006",
+      "primaryDomain": "design",
+      "occupations": [{"name": "Designer"}],
+      "confidence": 0.85
+    },
+    {
+      "key": "theo",
+      "canonicalName": "Theo Birch",
+      "birthDate": "1942",
+      "deathDate": "2013",
+      "primaryDomain": "architecture",
+      "occupations": [{"name": "Architect"}],
+      "confidence": 0.8
+    }
+  ],
+  "edges": [
+    {
+      "source": "aria",
+      "target": "mina",
+      "edgeType": "COLLABORATED_WITH",
+      "direction": "BIDIRECTIONAL",
+      "startDate": "1950",
+      "endDate": "1955",
+      "confidence": 0.9,
+      "description": "Worked together on a fictional workshop."
+    },
+    {
+      "source": "mina",
+      "target": "theo",
+      "edgeType": "CORRESPONDED_WITH",
+      "direction": "BIDIRECTIONAL",
+      "startDate": "1980",
+      "endDate": "1985",
+      "confidence": 0.7,
+      "description": "Exchanged letters in a fictional archive."
+    }
+  ],
+  "events": [
+    {
+      "person": "aria",
+      "type": "PUBLICATION",
+      "title": "Workshop notebook",
+      "date": "1951"
+    }
+  ]
+}
