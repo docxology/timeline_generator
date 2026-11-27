@@ -21,7 +21,8 @@ Monorepo managed by pnpm workspaces with 4 packages:
 - All source code is TypeScript (strict mode via `tsconfig.base.json`)
 - Every module has `@module` JSDoc with `@description`
 - Every public method has JSDoc with `@param` / `@returns`
-- Tests use Vitest and live in `src/__tests__/` within each package
+- Vitest tests live in `src/__tests__/` in backend, shared, and seed-data. The
+  frontend package has no test script.
 - API routes follow RESTful conventions: GET/POST/PATCH/DELETE
 - All interactive elements have `aria-label` or equivalent accessibility attributes
 - Inline styles are used only for dynamic data-driven values (domain colors, edge colors)
